@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOMEC | Statistics, Omics, Mexico & Canada</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="Colectivo científico y educativo trilingüe que conecta LATAM y Canadá en alfabetización de datos, soberanía genética y alfabetización mediática.">
+  
+  <!-- Fuentes e Iconos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FullCalendar CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css">
+  
+  <!-- Vinculación del CSS Local -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="navbar-header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-badge">SOMEC</span>
+      </a>
+
+      <!-- Botón de Menú Hambuguesa para Dispositivos Móviles -->
+      <button id="mobile-menu-btn" class="mobile-menu-toggle" data-i18n-attr="aria-label:nav.ariaMenu" aria-label="Abrir menú de navegación">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Menú / Índice Interactivo -->
+      <nav id="nav-menu" class="nav-menu">
+        <a href="#hero" class="nav-link" data-i18n="nav.home">Inicio</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">Sobre SOMEC</a>
+        <a href="#objectives" class="nav-link" data-i18n="nav.objectives">Objetivos</a>
+        <a href="#community" class="nav-link" data-i18n="nav.community">Comunidad</a>
+        <a href="#team" class="nav-link" data-i18n="nav.team">Equipo</a>
+        <a href="#webinars" class="nav-link" data-i18n="nav.webinars">Webinars</a>
+        <a href="#calendar" class="nav-link" data-i18n="nav.calendar">Calendario</a>
+        <a href="#mil" class="nav-link" data-i18n="nav.mil">Recursos MIL</a>
+        <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="nav-controls">
+        <div class="lang-selector-wrapper">
+          <select id="lang-select" data-i18n-attr="aria-label:nav.ariaLang" aria-label="Seleccionar idioma">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="pt">PT</option>
+            <option value="de">DE</option>
+          </select>
+        </div>
+
+        <button id="theme-toggle" class="theme-toggle-btn" data-i18n-attr="aria-label:nav.ariaTheme" aria-label="Cambiar tema">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-tagline" data-i18n="hero.tagline">Linked by Numbers, United by Genes</span>
+          <h1 class="hero-title" data-i18n="hero.title">Democratizando las ciencias de datos y ómicas sin fronteras</h1>
+          <p class="hero-description" data-i18n="hero.description">
+            Uniendo a América Latina y Canadá a través de la ciencia abierta, alfabetización de datos, soberanía genética y diálogo intercultural.
+          </p>
+          <div class="hero-buttons">
+            <a href="#about" class="btn btn-primary" data-i18n="hero.btnKnowUs">Conócenos</a>
+            <a href="#community" class="btn btn-secondary" data-i18n="hero.btnJoin">Únete al Colectivo</a>
+          </div>
+        </div>
+        
+        <div class="hero-graphic">
+          <svg width="64" height="64" fill="none" stroke="var(--accent-chartreuse)" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+          </svg>
+          <p class="hero-graphic-title" data-i18n="hero.graphicTitle">SOMEC Global Network</p>
+          <span class="hero-graphic-sub" data-i18n="hero.graphicSub">Statistics & Omics Data Hub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE SOMEC -->
+    <section id="about" class="section-padding container">
+      <div class="text-center">
+        <h2 class="section-title" data-i18n="about.title">Sobre SOMEC</h2>
+        <p class="section-subtitle" data-i18n="about.subtitle">Statistics, Omics, Mexico & Canada</p>
+      </div>
+      
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 data-i18n="about.missionTitle">Misión</h3>
+          <p data-i18n="about.missionText">Democratizar la estadística y las ciencias ómicas promoviendo la alfabetización de datos, la soberanía genética y el pensamiento crítico para combatir la desinformación y reducir desigualdades regionales.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+          </div>
+          <h3 data-i18n="about.visionTitle">Visión</h3>
+          <p data-i18n="about.visionText">Ser una red transfronteriza líder que transforma la ciencia de datos compleja en conocimiento accesible para el bienestar público, la participación democrática y la acción comunitaria.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+          </div>
+          <h3 data-i18n="about.philosophyTitle">Significado y Filosofía</h3>
+          <p data-i18n="about.philosophyText">"So, Mec?" actúa como una llamada a la acción trilingüe. Promovemos la soberanía genética frente al colonialismo genómico, la alfabetización estadística frente a la manipulación digital y el uso del francés para romper barreras lingüísticas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJETIVOS GENERALES Y OBJETIVOS SECUNDARIOS -->
+    <section id="objectives" class="section-padding bg-alt">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title" data-i18n="objectives.title">Objetivos Estratégicos</h2>
+          <p class="section-subtitle" data-i18n="objectives.subtitle">Pilares fundamentales y desglose de objetivos secundarios</p>
+        </div>
+
+        <div class="grid-3" style="margin-top: 40px;">
+          <!-- Pilar 1 -->
+          <div class="card">
+            <h3 data-i18n="objectives.p1Title">1. Soberanía Genética y Ciencias Ómicas</h3>
+            <p data-i18n="objectives.p1Gen"><strong>Objetivo General:</strong> Garantizar la autonomía, representación ética y la revalorización de los datos genómicos de las poblaciones latinoamericanas.</p>
+            <div class="sub-objectives-block">
+              <h4 data-i18n="objectives.p1SubTitle">Objetivos Secundarios:</h4>
+              <ul class="sub-objectives-list">
+                <li data-i18n="objectives.p1Sub1">Desarrollar capacidades locales bioinformáticas para el análisis independiente de datos genómicos en la región.</li>
+                <li data-i18n="objectives.p1Sub2">Establecer marcos éticos de gobernanza de datos que eviten prácticas extractivas por parte de entidades extranjeras.</li>
+                <li data-i18n="objectives.p1Sub3">Incrementar la representación de las poblaciones mestizas e indígenas en bases de datos biomédicas globales.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pilar 2 -->
+          <div class="card">
+            <h3 data-i18n="objectives.p2Title">2. Alfabetización Estadística y Anti-Desinformación</h3>
+            <p data-i18n="objectives.p2Gen"><strong>Objetivo General:</strong> Capacitar a la ciudadanía con competencias críticas de alfabetización de datos para contrarrestar la desinformación digital.</p>
+            <div class="sub-objectives-block">
+              <h4 data-i18n="objectives.p2SubTitle">Objetivos Secundarios:</h4>
+              <ul class="sub-objectives-list">
+                <li data-i18n="objectives.p2Sub1">Traducir conceptos analíticos y metodologías complejas a lenguaje accesible para el público general.</li>
+                <li data-i18n="objectives.p2Sub2">Brindar herramientas que permitan identificar fraudes científicos, métricas engañosas y manipulación en redes sociales.</li>
+                <li data-i18n="objectives.p2Sub3">Fomentar el aprovechamiento de datos abiertos para la fiscalización pública y la solución de problemas sociales comunitarios.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pilar 3 -->
+          <div class="card">
+            <h3 data-i18n="objectives.p3Title">3. Inclusión Trilingüe y Diálogo Panamericano</h3>
+            <p data-i18n="objectives.p3Gen"><strong>Objetivo General:</strong> Construir puentes del conocimiento incluyentes entre América Latina y Canadá articulando comunidades multiétnicas.</p>
+            <div class="sub-objectives-block">
+              <h4 data-i18n="objectives.p3SubTitle">Objetivos Secundarios:</h4>
+              <ul class="sub-objectives-list">
+                <li data-i18n="objectives.p3Sub1">Integrar a la comunidad francófona (ej. Quebec) en los intercambios científicos y divulgativos panamericanos.</li>
+                <li data-i18n="objectives.p3Sub2">Romper el monopolio del idioma inglés en la difusión de ciencias de datos y bioinformática.</li>
+                <li data-i18n="objectives.p3Sub3">Implementar formatos híbridos de mediación lingüística y soporte en vivo para audiencias diversas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METAS E IMPACTO -->
+    <section class="impact-section">
+      <div class="container impact-grid">
+        <div>
+          <span class="impact-number">+15</span>
+          <p class="impact-label" data-i18n="impact.events">Meta de Eventos Transmitidos</p>
+        </div>
+        <div>
+          <span class="impact-number">3</span>
+          <p class="impact-label" data-i18n="impact.languages">Idiomas Integrados (ES / EN / FR)</p>
+        </div>
+        <div>
+          <span class="impact-number">2</span>
+          <p class="impact-label" data-i18n="impact.regions">Regiones Unidas (LATAM & Canadá)</p>
+        </div>
+        <div>
+          <span class="impact-number">+500</span>
+          <p class="impact-label" data-i18n="impact.youth">Meta de Jóvenes Impactados</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMUNIDAD -->
+    <section id="community" class="section-padding container text-center">
+      <h2 class="section-title" data-i18n="community.title">Nuestra Comunidad</h2>
+      <p class="section-subtitle" data-i18n="community.subtitle">Conéctate con nosotros en nuestras plataformas oficiales</p>
+      
+      <div class="social-links-grid">
+        <a href="https://www.linkedin.com/in/so-mec-25350b42a" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="LinkedIn">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.instagram.com/so_mec_edu" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Instagram">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Instagram
+        </a>
+        <a href="https://x.com/so_mec_edu" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="X">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X (Twitter)
+        </a>
+        <a href="https://www.facebook.com/share/19AFUhy1CB/" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Facebook">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a href="https://bsky.app/profile/so-mec.bsky.social" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Bluesky">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566 0.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.377 5.665 1.006 7.424.873 2.441 3.256 3.09 5.56 2.823-3.955.672-6.028 2.37-4.636 5.808 1.74 4.3 7.218 2.056 9.387-1.127.243-.356.467-.732.683-1.127.216.395.44.771.683 1.127 2.169 3.183 7.647 5.427 9.387 1.127 1.392-3.438-.681-5.136-4.636-5.808 2.304.267 4.687-.382 5.56-2.823C23.623 9.433 24 4.458 24 3.768c0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z"/></svg>
+          Bluesky
+        </a>
+        <a href="http://www.youtube.com/@so_mec_edu" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="YouTube">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          YouTube
+        </a>
+      </div>
+    </section>
+
+    <!-- EQUIPO Y UBICACIÓN -->
+    <section id="team" class="section-padding bg-alt">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title" data-i18n="team.title">Equipo Fundador</h2>
+          <p class="section-subtitle" data-i18n="team.subtitle">Liderando la iniciativa transfronteriza</p>
+        </div>
+
+        <div class="grid-4" style="margin-top: 40px;">
+          <div class="card founder-card">
+            <div class="founder-avatar">EG</div>
+            <h4>Enya Paola Guzmán Rosas</h4>
+            <p data-i18n="team.enyaRole">Co-fundadora — BUAP</p>
+            <a href="https://www.linkedin.com/in/enya-guzman-rosas-865b63359/" target="_blank" rel="noopener noreferrer" class="linkedin-link" data-i18n="team.viewLinkedin">Ver LinkedIn</a>
+          </div>
+          
+          <div class="card founder-card">
+            <div class="founder-avatar">AC</div>
+            <h4>Angel Ricardo Casanova Cocom</h4>
+            <p data-i18n="team.angelRole">Co-fundador — UADY</p>
+            <a href="https://www.linkedin.com/in/dr-nova/" target="_blank" rel="noopener noreferrer" class="linkedin-link" data-i18n="team.viewLinkedin">Ver LinkedIn</a>
+          </div>
+
+          <div class="card founder-card">
+            <div class="founder-avatar">PC</div>
+            <h4>Ing. Paulo Eduardo Cambranis Boldo</h4>
+            <p data-i18n="team.pauloRole">Co-fundador — IIMAS</p>
+            <a href="https://www.linkedin.com/in/paulo-cambranis-boldo-204a071b8/" target="_blank" rel="noopener noreferrer" class="linkedin-link" data-i18n="team.viewLinkedin">Ver LinkedIn</a>
+          </div>
+
+          <div class="card founder-card">
+            <div class="founder-avatar">DR</div>
+            <h4>Ing. David Conrado Rivero Alvarado</h4>
+            <p data-i18n="team.davidRole">Co-fundador — UDG</p>
+            <a href="https://www.linkedin.com/in/davidriveroalvarado/" target="_blank" rel="noopener noreferrer" class="linkedin-link" data-i18n="team.viewLinkedin">Ver LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="map-box text-center">
+          <h3 style="margin-bottom: 8px;" data-i18n="team.presenceTitle">Presencia Regional</h3>
+          <p style="color: var(--text-muted); font-size: 0.98rem; font-weight: 500;" data-i18n="team.presenceSubtitle">Nodos activos de colaboración en Puebla y Yucatán</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEBINARS -->
+    <section id="webinars" class="section-padding container text-center">
+      <h2 class="section-title" data-i18n="webinars.title">Webinars</h2>
+      <p class="section-subtitle" style="margin-bottom: 25px;" data-i18n="webinars.subtitle">Accede a nuestros seminarios web y talleres interactivos</p>
+      <button id="webinars-btn" class="btn btn-primary" data-i18n="webinars.btnView">Ver Webinars Disponibles</button>
+
+      <div id="webinars-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h3 style="margin-bottom: 12px;" data-i18n="webinars.modalTitle">Sin webinars disponibles por el momento</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="webinars.modalText">Por el momento no hay webinars programados. Por favor, sigue nuestras redes sociales oficiales para mantenerte actualizado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALENDARIO DE EVENTOS -->
+    <section id="calendar" class="section-padding bg-alt">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 30px;">
+          <h2 class="section-title" data-i18n="calendar.title">Calendario de Eventos</h2>
+          <p class="section-subtitle" data-i18n="calendar.subtitle">Próximas sesiones, conversatorios y actividades públicas</p>
+        </div>
+        <div id="calendar-widget" class="card"></div>
+      </div>
+    </section>
+
+    <!-- RECURSOS E INICIATIVAS (MIL) CON ENLACES FUNCIONALES -->
+    <section id="mil" class="section-padding container">
+      <div class="text-center">
+        <h2 class="section-title" data-i18n="mil.title">Recursos e Iniciativas</h2>
+        <p class="section-subtitle">Core Concepts and Definitions of Media and Information Literacy (MIL)</p>
+      </div>
+
+      <div class="grid-3" style="margin-top: 40px;">
+        <div class="card">
+          <h3 data-i18n="mil.card1Title">Media Literacy</h3>
+          <p style="margin-bottom: 20px;">Want to know more about Media literacy.</p>
+          <a href="https://www.unesco.org/en/query-list/m/media-literacy" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.85rem; width: 100%;" data-i18n="mil.card1Btn">Visitar Recurso UNESCO</a>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="mil.card2Title">MIL e-Platform</h3>
+          <p style="margin-bottom: 20px;">Welcome to the Media and Information Literacy e-Platform.</p>
+          <a href="https://www.unesco.org/mil4teachers/en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.85rem; width: 100%;" data-i18n="mil.card2Btn">Acceder a la Plataforma</a>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="mil.card3Title">EU Code of Practice</h3>
+          <p style="margin-bottom: 20px;">A strengthened EU Code of Practice on Disinformation.</p>
+          <a href="https://commission.europa.eu/topics/countering-information-manipulation/strengthened-eu-code-practice-disinformation_en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.85rem; width: 100%;" data-i18n="mil.card3Btn">Consultar Código de la UE</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="section-padding bg-alt">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title" data-i18n="faq.title">Preguntas Frecuentes</h2>
+          <p class="section-subtitle" data-i18n="faq.subtitle">Resuelve tus dudas sobre el colectivo, nuestros pilares y actividades</p>
+        </div>
+
+        <div class="accordion-wrapper">
+          
+          <!-- SECCIÓN 1 -->
+          <h3 class="faq-category-title" data-i18n="faq.cat1">Identidad y Propósito</h3>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q1">¿Qué significa SOMEC y cuál es su objetivo?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a1"><strong>SOMEC</strong> significa <em>Statistics, Omics, Mexico & Canada</em>. Es un colectivo internacional científico y educativo que busca democratizar la cultura de datos, la soberanía genética y el pensamiento crítico entre Latinoamérica y Canadá.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q2">¿Por qué conectar México (LATAM) y Canadá?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a2">Aunque tienen contextos socioeconómicos distintos, ambas regiones enfrentan la desinformación digital, el uso no ético de datos y la falta de representación de sus poblaciones en bases de datos genómicas globales. SOMEC crea un puente trilingüe para abordar estos retos comunes.</p>
+            </div>
+          </div>
+
+          <!-- SECCIÓN 2 -->
+          <h3 class="faq-category-title" data-i18n="faq.cat2">Pilares y Temas Clave</h3>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q3">¿A qué se refieren con "Soberanía Genética" y "Ómicas"?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a3">Las ciencias ómicas (como la genómica) estudian la información biológica. La soberanía genética busca que los datos de nuestras poblaciones no se utilicen de forma extractiva en el extranjero, sino que impulsen la investigación médica local y personalizada.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q4">¿Por qué incluyen la alfabetización estadística y contra la desinformación?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a4">Entender datos permite a la ciudadanía identificar fake news, evitar fraudes financieros/médicos y exigir cuentas a las instituciones. Buscamos que los datos públicos sean herramientas para la acción comunitaria.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q5">¿Por qué el francés forma parte de un colectivo de ciencia y datos?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a5">Promovemos el trilingüismo (español, inglés y francés) para integrar a la comunidad francófona de Canadá (como Quebec) en el diálogo panamericano y romper el monopolio lingüístico del inglés en la ciencia.</p>
+            </div>
+          </div>
+
+          <!-- SECCIÓN 3 -->
+          <h3 class="faq-category-title" data-i18n="faq.cat3">Participación y Formas de Involucrarse</h3>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q6">¿Tengo que ser científico o estudiante de STEM para unirme o participar?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a6">No. SOMEC utiliza metodologías de educación popular para traducir conceptos complejos a un lenguaje cotidiano. Las actividades están abiertas a jóvenes, profesionales de ciencias sociales y público general.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q7">¿Cómo funcionan las "Proyecciones en Cafés" o eventos locales?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a7">Transmitimos seminarios y paneles en vivo proyectándolos en espacios comunitarios (cafés, plazas, universidades) seguidos de debates presenciales locales para discutir soluciones a problemas comunitarios.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q8">¿Cómo puedo unirme o colaborar con SOMEC?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a8">Puedes unirte como voluntario, investigador colaborador o sede local para proyectar nuestras sesiones completando el formulario en nuestra sección de Contacto.</p>
+            </div>
+          </div>
+
+          <!-- SECCIÓN 4 -->
+          <h3 class="faq-category-title" data-i18n="faq.cat4">Sobre el Idioma y la Comunicación Trilingüe</h3>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q9">¿Cómo puedo participar en un evento si no hablo inglés o francés (o si los ponentes no hablan español)?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content" data-i18n="faq.a9">
+              <ul class="faq-bullets">
+                <li><strong>Soporte y mediación lingüística:</strong> Nuestras sesiones en vivo no son conferencias tradicionales unidireccionales; cuentan con apoyo bilingüe/trilingüe en tiempo real. Presentamos diapositivas y materiales de soporte visual traducidos, e integramos facilitadores del colectivo que sintetizan y traducen preguntas e intervenciones entre español, inglés y francés durante el debate.</li>
+                <li><strong>Intercambios dialectales y accesibilidad:</strong> Las actividades están diseñadas para que el idioma no sea una barrera de entrada, sino una oportunidad de aprendizaje colaborativo. Promovemos que la audiencia se exprese en su lengua materna mientras el equipo ayuda a construir el puente de comunicación con el expositor.</li>
+                <li>La plataforma Zoom tiene una opción para traducir automáticamente.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q10">¿El colectivo ofrece clases formales de idiomas?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a10">No impartimos clases de gramática tradicionales, sino <strong>Cafés Científicos y Lingüísticos (Linguistic Bridges Science Cafés)</strong>. Son espacios interactivos de divulgación donde se presenta ciencia en un idioma con dinámicas de intercambio lingüístico práctico, permitiendo perder el miedo a comunicarse en inglés o francés en entornos científicos reales.</p>
+            </div>
+          </div>
+
+          <!-- SECCIÓN 5 -->
+          <h3 class="faq-category-title" data-i18n="faq.cat5">Sobre el Tipo de Actividades</h3>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q11">¿Qué tipo de actividades realiza SOMEC exactamente?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content" data-i18n="faq.a11">
+              <ul class="faq-bullets">
+                <li><strong>Sesiones "Data in Action":</strong> Especialistas invitados muestran de forma práctica cómo utilizan datos públicos y estadísticas para resolver problemas comunitarios reales (salud, medio ambiente, economía local).</li>
+                <li><strong>Paneles de "Humanismo Digital":</strong> Expertos en tecnología y derechos digitales exponen cómo funcionan los algoritmos de las redes sociales, la recolección de datos personales y la desinformación para enseñar a la ciudadanía a protegerse.</li>
+                <li><strong>Showcases de "Ómicas y Sociedad":</strong> Investigadores en genética y bioinformática explican la importancia de la diversidad genética regional, la soberanía de datos y cómo la medicina personalizada beneficia a nuestras poblaciones.</li>
+                <li><strong>Diálogos Transfronterizos:</strong> Mesas de discusión multidisciplinarias entre LATAM y Canadá para conectar la biología con factores sociales, económicos y comunitarios.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q12">¿En dónde se llevan a cabo las actividades?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content" data-i18n="faq.a12">
+              <p>Combinamos un modelo híbrido:</p>
+              <ul class="faq-bullets" style="margin-top: 8px;">
+                <li><strong>Formato Virtual:</strong> Paneles, seminarios y conversatorios transmitidos en línea.</li>
+                <li><strong>Formato Presencial ("Café Projections"):</strong> Transmitimos los seminarios en vivo dentro de espacios públicos físicos (cafeterías aliadas, bibliotecas, plazas o auditorios universitarios en México y Canadá) para eliminar la barrera de conectividad individual y facilitar debates presenciales en la comunidad al finalizar la transmisión.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SECCIÓN 6 -->
+          <h3 class="faq-category-title" data-i18n="faq.cat6">Impacto y Beneficios para la Sociedad</h3>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q13">¿Cómo beneficia a mi comunidad que aprenda a usar datos y estadística?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a13">Cuando una comunidad entiende los datos, puede pasar de ser espectadora a ser protagonista: identifica problemas locales con evidencia real y diseña soluciones propias, en lugar de depender de decisiones externas. SOMEC busca que este conocimiento se traduzca en acción ciudadana concreta, desde auditar el uso de recursos públicos hasta proponer mejoras en su entorno inmediato.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q14">¿Qué papel juega SOMEC en fortalecer LATAM y Canadá frente al mundo?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a14">La colaboración en datos y ciencia entre ambas regiones no es solo académica: busca construir una identidad continental compartida, basada en retos y fortalezas comunes. Esto prepara a la ciudadanía para participar activamente en foros internacionales, respaldar el derecho internacional que protege a sus países, y reducir el aislamiento que provoca un mundo cada vez más polarizado ideológicamente.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q15">¿Cómo protege SOMEC a las personas del mal uso de sus datos personales en internet?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a15">Uno de nuestros objetivos es formar una ciudadanía consciente de que los algoritmos y plataformas digitales no son neutrales: fueron diseñados por personas, con intereses económicos detrás. Enseñamos a reconocer y resistir prácticas de manipulación, recolección abusiva de datos y publicidad dirigida diseñada para influir en la opinión pública con fines de lucro.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q16">¿Por qué SOMEC conecta la salud, los datos y el medio ambiente como un mismo tema?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a16">Porque no son problemas aislados. Promovemos el pensamiento sistémico: entender cómo la salud humana, los ecosistemas de datos y el medio ambiente están interconectados. Esto permite que la juventud analice estructuras complejas y lidere intervenciones comunitarias cuyo impacto, aunque empiece en lo local, puede generar cambios sistémicos más amplios.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q17">¿Qué beneficio trae la investigación genómica de SOMEC más allá del ámbito científico?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a17">Buscamos que los avances en ciencias ómicas se traduzcan en beneficios tangibles: medicina personalizada, diagnósticos tempranos y nuevos tratamientos. Además, impulsamos que este conocimiento se quede en la región — apoyando talento local, incentivando emprendimiento científico, y fortaleciendo presupuestos públicos de ciencia para reducir la fuga de cerebros y fortalecer las economías nacionales.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq.q18">¿Qué relación tiene el francés con la construcción de puentes entre culturas?</span>
+              <span class="icon">&darr;</span>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq.a18">Aprender francés dentro de SOMEC no es solo un ejercicio lingüístico: es una forma de acercar a comunidades francófonas como Quebec al diálogo panamericano, romper el monopolio del inglés en la ciencia, y construir empatía intercultural genuina. Creemos que conocer la historia y perspectiva de otras sociedades reduce la polarización regional y fortalece la convivencia.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="section-padding container text-center">
+      <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+      <p class="section-subtitle" data-i18n="contact.subtitle">¿Quieres colaborar, proponer un tema o convertirte en sede local?</p>
+      <div style="margin-top: 25px;">
+        <a href="mailto:statisticsomics.mec@gmail.com" class="btn btn-primary" data-i18n="contact.btnEmail">Enviar Correo Electrónico</a>
+      </div>
+      <div class="footer-socials" style="margin-top: 25px;">
+        <a href="https://www.linkedin.com/in/so-mec-25350b42a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/so_mec_edu" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://x.com/so_mec_edu" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/share/19AFUhy1CB/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://bsky.app/profile/so-mec.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+          <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566 0.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.377 5.665 1.006 7.424.873 2.441 3.256 3.09 5.56 2.823-3.955.672-6.028 2.37-4.636 5.808 1.74 4.3 7.218 2.056 9.387-1.127.243-.356.467-.732.683-1.127.216.395.44.771.683 1.127 2.169 3.183 7.647 5.427 9.387 1.127 1.392-3.438-.681-5.136-4.636-5.808 2.304.267 4.687-.382 5.56-2.823C23.623 9.433 24 4.458 24 3.768c0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z"/></svg>
+        </a>
+        <a href="http://www.youtube.com/@so_mec_edu" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg class="footer-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container footer-content">
+      <p data-i18n="footer.copyright">&copy; 2026 SOMEC (Statistics, Omics, Mexico & Canada). Todos los derechos reservados.</p>
+      <div>
+        <a href="mailto:statisticsomics.mec@gmail.com" style="color: #FFFFFF; text-decoration: none; font-weight: 500;">statisticsomics.mec@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+  
+  <!-- Carga del Diccionario de Traducciones -->
+  <script src="translations.js"></script>
+
+  <!-- Vinculación del JavaScript Local -->
+  <script src="script.js"></script>
+</body>
+</html>
